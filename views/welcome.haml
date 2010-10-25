@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title App
+  %body
+    %h1
+      App
+    %p
+      Welcome to App!
+
+    %p
+      - if warden.authenticated?
+        Welcome 
+        = warden.user.email
+        •
+        %a{ :href => "/logout" } Log out
+      - else
+        %a{ :href => "/login" } Log in
+
