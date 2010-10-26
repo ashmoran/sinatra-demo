@@ -13,7 +13,6 @@ Feature: Home page
     When I log in
     Then I should be on the home page
     And I should see a personalised welcome message
-    And I should see a personalised welcome message
   
   Scenario: Log in incorrectly
     Given I am on the home page
