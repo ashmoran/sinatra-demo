@@ -12,8 +12,8 @@ Feature: Home page
     Given I am on the home page
     When I log in
     Then I should be on the home page
-    And I should not see a personalised welcome message
-    # And I should see "Welcome a@b.com"
+    And I should see a personalised welcome message
+    And I should see a personalised welcome message
   
   Scenario: Log in incorrectly
     Given I am on the home page
@@ -35,6 +35,3 @@ Feature: Home page
     Then I should be on the home page
     And I should see "Log in"
     And I should not see a personalised welcome message
-  
-  
-  

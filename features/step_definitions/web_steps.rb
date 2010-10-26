@@ -29,7 +29,7 @@ end
 
 Then /^(?:|I )should not see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   with_scope(selector) do
-    page.should have_no_xpath("//*[text()='#{text}']", :visible => true)
+    page.should have_no_xpath("//*[contains(normalize-space(text()), '#{text}')]", :visible => true)
   end
 end
 
